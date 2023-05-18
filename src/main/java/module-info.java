@@ -9,4 +9,6 @@ module tanzudeployment.tanzudeploymentfolderfactory {
 
     opens tanzudeployment.tanzudeploymentfolderfactory to javafx.fxml;
     exports tanzudeployment.tanzudeploymentfolderfactory;
+    exports tanzudeployment.tanzudeploymentfolderfactory.controller;
+    opens tanzudeployment.tanzudeploymentfolderfactory.controller to javafx.fxml;
 }

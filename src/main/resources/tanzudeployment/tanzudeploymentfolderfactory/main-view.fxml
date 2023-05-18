@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="650.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tanzudeployment.tanzudeploymentfolderfactory.controller.MainController">
+   <VBox prefHeight="30.0" prefWidth="610.0">
+      <children>
+         <MenuBar prefHeight="252.0" prefWidth="650.0">
+           <menus>
+             <Menu mnemonicParsing="false" text="Configuration">
+               <items>
+                 <MenuItem mnemonicParsing="false" text="Change parameters" />
+               </items>
+             </Menu>
+           </menus>
+         </MenuBar>
+      </children>
+   </VBox>
+   <VBox prefHeight="200.0" prefWidth="100.0">
+      <children>
+         <HBox prefHeight="100.0" prefWidth="200.0">
+            <children>
+               <HBox alignment="CENTER" prefHeight="87.0" prefWidth="307.0">
+                  <children>
+                     <Label text="Deployment version: ">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                     <TextField fx:id="deploymentVersion" onKeyReleased="#updateFolderPath" />
+                  </children>
+               </HBox>
+               <HBox alignment="CENTER" prefHeight="87.0" prefWidth="343.0">
+                  <children>
+                     <Label text="Deployment date: ">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                     <DatePicker fx:id="deploymentDate" onAction="#updateFolderPath" onKeyReleased="#updateFolderPath" />
+                  </children>
+               </HBox>
+            </children>
+         </HBox>
+         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+            <children>
+               <Label text="Folder path: ">
+                  <font>
+                     <Font size="14.0" />
+                  </font>
+               </Label>
+               <TextField fx:id="folderPath" prefWidth="400.0">
+                  <HBox.margin>
+                     <Insets left="15.0" right="15.0" />
+                  </HBox.margin>
+               </TextField>
+               <Button fx:id="createFolderButton" mnemonicParsing="false" onAction="#onCreateFolder" text="Create folder" />
+            </children>
+         </HBox>
+      </children>
+   </VBox>
+   <VBox prefHeight="200.0" prefWidth="100.0" />
+   <VBox alignment="TOP_CENTER" prefHeight="196.0" prefWidth="650.0">
+      <children>
+         <Button fx:id="onGenerateFolderAndFile" mnemonicParsing="false" text="Generate folder and files">
+            <VBox.margin>
+               <Insets bottom="10.0" />
+            </VBox.margin>
+         </Button>
+         <ProgressBar prefHeight="18.0" prefWidth="641.0" progress="0.0" />
+      </children>
+      <VBox.margin>
+         <Insets />
+      </VBox.margin>
+      <padding>
+         <Insets top="15.0" />
+      </padding>
+   </VBox>
+</VBox>

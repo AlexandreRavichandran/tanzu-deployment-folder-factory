@@ -31,6 +31,22 @@
             <version>11.1.0</version>
         </dependency>
         <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>5.2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>5.2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.26</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
             <groupId>com.dlsc.formsfx</groupId>
             <artifactId>formsfx-core</artifactId>
             <version>11.3.2</version>
@@ -92,7 +108,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                tanzudeployment.tanzudeploymentfolderfactory/tanzudeployment.tanzudeploymentfolderfactory.HelloApplication
+                                tanzudeployment.tanzudeploymentfolderfactory/tanzudeployment.tanzudeploymentfolderfactory.MainApplication
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
